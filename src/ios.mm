@@ -244,7 +244,7 @@ namespace date
             std::ifstream is(tarPath.c_str(), std::ifstream::in | std::ifstream::binary);
 
             // process files
-            while (location < tarSize)
+            while ((int64_t)location < tarSize)
             {
                 TarInfo info = getTarObjectInfo(is);
 
